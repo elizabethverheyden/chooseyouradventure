@@ -1,0 +1,117 @@
+
+
+
+
+
+
+def beeabduction ():
+    print ("the swarm of bees is surprisingly strong and they carry you in the air several miles")
+    print(" ")
+    droppedinriver = input("do you 1: decide to break away or 2: let them take you? ")
+    if droppedinriver.lower() == ("1"):
+        print ("you struggle free only to fall into the river below you")
+        print ("unfortunately, you never learned how to swim and you drown")
+        print ("after a few days of floating down with the current, the river leads into the ocean")
+    #     end of path
+    elif droppedinriver.lower() == ("2"):
+        print ("the bees continue to fly and eventually you're over the ocean")
+        print ("then, they drop you into the water")
+        print ("you drown and eventually wash up on shore a few days later")
+    #     end of path
+    else:
+        print("enter only either '1' or '2'")
+        beeabduction()
+
+def continuethedrive ():
+    print ("you keep driving but you think you see something out of the corner of your eye moving toward the road")
+    print(" ")
+    driving = input("do you 1: swerve out of the way or 2: keep driving? ")
+    if driving.lower() == ("1"):
+        print ("as you swerve out of the way, an ambulance comes from the other direction")
+        print ("your car collides with the ambulance and you die on impact")
+        print ("your family eventually decides to spread your ashes off the nearest pier")
+    #     path completed
+    # there was nothing there and you hit an ambulance and die
+    elif driving.lower() == ("2"):
+        print ("you hope it was nothing and keep driving but turns out it was an ambulance that lost control")
+        print ("your car collides with the ambulance and you die on impact")
+        print ("your family eventually decides to spread your ashes off the nearest pier")
+    #     path completed
+    else:
+        print ("enter only either '1' or '2'")
+        continuethedrive()
+
+def swarmofbees ():
+    print(" ")
+    beereaction = input("do you 1: start swatting the bees away or 2: let them eat the peach in peace? ")
+    if beereaction.lower() == ("1"):
+        print("you begin flailing your arms in attempt to make them leave. however, this only angers them")
+        print("the bees form together and lift you and your peach into the air")
+        beeabduction()
+    #     get carried away and dropped in river
+    elif beereaction.lower() == ("2"):
+        print ("they bees only sting you a few times and eventually fly away")
+        continuethedrive()
+    #     you continue on to drive to the beach but an ambulance crashes on the road
+    else:
+        print ("enter only either '1' or '2'")
+        swarmofbees()
+
+def allergies ():
+    print(" ")
+    allergicreaction = input("do you want to 1: finish the sandwich anyway or 2: call for an ambulance? ")
+    if allergicreaction.lower() == ("1"):
+        print ("you die you idiot")
+        print ("your family decides to spread your ashes off the nearest pier")
+    #     path completed
+    elif allergicreaction.lower() == ("2"):
+    #     go to the ambulance crashes and you're in the river
+        print ("the ambulance arrives quickly and you get in")
+        print ("all of a sudden, the ambulance crashes and you die on impact")
+        print ("your family eventually decides to spread your ashes off the nearest pier")
+    # path done
+
+    else:
+        print ("enter only either '1' or '2'")
+        allergies()
+
+
+
+
+
+
+
+def inthecar():
+    print ("great! you head into your car and start driving. eventually, you get hungry and want something to eat")
+    print(" ")
+    whichfood = input("Do you want to eat 1: a peach or 2: a sandwich? ")
+    if whichfood.lower() == ("1"):
+        print ("you buy a fresh peach from a foodstand and start eating, but it's really ripe and a swarm of bees is attracted.")
+        swarmofbees()
+    #     go to either swat the bees or throw the peach out the window
+    elif whichfood.lower() == ("2"):
+        print("oh no! turns out there's peanut butter in the sandwich and you're allergic.")
+        allergies()
+#         go to either keep eating or call for an ambulance
+    else:
+        print ("enter only either '1' or '2'")
+        inthecar ()
+
+
+
+def destination():
+    whichdest = input("Do you want to visit 1: the beach or 2: the mall? ")
+    if whichdest.lower() == ("1"):
+        inthecar ()
+#         next function
+    elif whichdest.lower() == ("2"):
+        inthecar ()
+    else:
+        print ("enter only either '1' or '2'")
+        destination()
+
+
+print ("you have the weekend free so you decide to go on a quick road trip")
+destination()
+
+print ("well, i guess you made it to the beach anyway")
